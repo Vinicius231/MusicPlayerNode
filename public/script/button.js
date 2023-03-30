@@ -4,7 +4,7 @@ var barra = document.querySelector(".barra");
 var duracao = document.querySelector(".duracao");
 var tempo = document.querySelector(".tempo");
 
-const url = "http://localhost:3000/api";
+const url = "https://music-player-node.vercel.app/api";
 var opcao = 0;
 var musica = 0;
 var audio;
