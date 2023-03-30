@@ -3,6 +3,7 @@ var artista = document.querySelector(".artista");
 var barra = document.querySelector(".barra");
 var duracao = document.querySelector(".duracao");
 var tempo = document.querySelector(".tempo");
+var audio = document.querySelector('.audio')
 
 const url = "https://music-player-node.vercel.app/api";
 var opcao = 0;
