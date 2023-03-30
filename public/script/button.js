@@ -10,6 +10,7 @@ var opcao = 0;
 var musica = 0;
 var audio;
 var data;
+var interval
 
 async function getAllMusic() {
   const response = await fetch(url);
@@ -18,6 +19,8 @@ async function getAllMusic() {
 
   audio = new Audio(`../music/${data[musica].Arquivo}`);
   update();
+
+  startInterval()
 }
 const play = () => {
   if (opcao == 0) {
@@ -90,5 +93,7 @@ const time = () => {
   }
 };
 
-setInterval(time, 500);
+const startInterval = () => {
+    interval = setInterval(time, 500);
+}
 getAllMusic();
