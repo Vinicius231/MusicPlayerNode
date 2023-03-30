@@ -14,6 +14,8 @@ router.get('/api',(req,res)=> {
     return res.json(music)
 })
 
+app.use('/css', express.static(path.join(__dirname+'public/css')))
+
 app.listen(process.env.PORT || 3000)
 
 app.use(router)
