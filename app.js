@@ -7,6 +7,8 @@ const router = express.Router()
 app.use(express.static('public'))
 
 app.use('/css', express.static(path.join(__dirname+'/public/css')))
+app.use('/script', express.static(path.join(__dirname+'/public/script')))
+app.use('/imgs', express.static(path.join(__dirname+'/public/imgs')))
 
 
 router.get('/',(req,res)=> {
