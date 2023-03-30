@@ -6,6 +6,9 @@ const router = express.Router()
 
 app.use(express.static('public'))
 
+app.use('/css', express.static(path.join(__dirname+'public/css')))
+
+
 router.get('/',(req,res)=> {
     res.sendFile(path.join(__dirname+'/public/page/index.html'))
 })
@@ -13,8 +16,6 @@ router.get('/',(req,res)=> {
 router.get('/api',(req,res)=> {
     return res.json(music)
 })
-
-app.use('/css', express.static(path.join(__dirname+'public/css')))
 
 app.listen(process.env.PORT || 3000)
 
