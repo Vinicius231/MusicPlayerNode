@@ -56,11 +56,15 @@ const update = () => {
   artista.innerHTML = data[musica].Artista;
 };
 
+const barraClick = ()=> {
+    var barraValue = barra.value
+    audio.currentTime = barraValue
+}
 const time = () => {
-  let time = audio.currentTime;
+  let timeBarra = audio.currentTime
 
-  let timeMinuto = Math.floor(time / 60);
-  let timeSegundo = Math.floor(time % 60);
+  let timeMinuto = Math.floor(timeBarra / 60);
+  let timeSegundo = Math.floor(timeBarra % 60);
 
   let duration = audio.duration;
 
@@ -77,11 +81,13 @@ const time = () => {
   tempo.innerHTML = `${timeMinuto}:${timeSegundo}`;
   duracao.innerHTML = `${minuto}:${segundo}`;
 
-  barra.value = time;
+  barra.value = timeBarra;
   barra.max = duration;
+
+  if(timeBarra >= duration) {
+    next()
+  }
 };
 
-setInterval(time, 1000);
-
-//3:48
+setInterval(time, 500);
 getAllMusic();
