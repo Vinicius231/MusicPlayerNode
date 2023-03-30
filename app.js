@@ -6,7 +6,7 @@ const router = express.Router()
 
 app.use(express.static('public'))
 
-app.use('/css', express.static(path.join(__dirname+'public/css')))
+app.use('/css', express.static(path.join(__dirname+'/public/css')))
 
 
 router.get('/',(req,res)=> {
