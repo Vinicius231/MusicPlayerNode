@@ -1,0 +1,30 @@
+.container {
+    background: black;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    min-width: 250px;
+    height: 400px;
+    margin: auto;
+    padding: 15px;
+}
+.time {
+    font-weight: bolder;
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.barra {
+    width: 210px;
+}
+.containerBTN button {
+    background: transparent;
+    border: none;
+}
+.containerBTN button img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
