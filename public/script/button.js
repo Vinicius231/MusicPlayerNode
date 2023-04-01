@@ -4,6 +4,7 @@ var barra = document.querySelector(".barra");
 var duracao = document.querySelector(".duracao");
 var tempo = document.querySelector(".tempo");
 var audio = document.querySelector('.audio')
+var imgPlay = document.querySelector('.imgPlay')
 
 const url = "https://music-player-node.vercel.app/api";
 var opcao = 0;
@@ -25,9 +26,11 @@ async function getAllMusic() {
 const play = () => {
   if (opcao == 0) {
     audio.play();
+    imgPlay.src = '../imgs/pause.png'
     opcao++;
   } else if (opcao == 1) {
     audio.pause();
+    imgPlay.src = '../imgs/continuar.png'
     opcao--;
   }
   update();
@@ -41,6 +44,7 @@ const next = () => {
   }
   audio = new Audio(`../music/${data[musica].Arquivo}`);
   audio.play();
+  imgPlay.src = '../imgs/pause.png'
   update();
 };
 
@@ -52,6 +56,7 @@ const before = () => {
   }
   audio = new Audio(`../music/${data[musica].Arquivo}`);
   audio.play();
+  imgPlay.src = '../imgs/pause.png'
   update();
 };
 
