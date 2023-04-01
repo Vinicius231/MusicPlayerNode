@@ -68,6 +68,9 @@ const update = () => {
 barra.addEventListener('touchmove',()=> {
   barraClick()
 })
+barra.addEventListener('touchstart',()=>{
+  barraClick()
+})
 
 const barraClick = ()=> {
     var barraValue = barra.value
