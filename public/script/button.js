@@ -65,6 +65,10 @@ const update = () => {
   artista.innerHTML = data[musica].Artista;
 };
 
+barra.addEventListener('touchmove',()=> {
+  barraClick()
+})
+
 const barraClick = ()=> {
     var barraValue = barra.value
     audio.currentTime = barraValue
